@@ -1,0 +1,43 @@
+Duc Nguyen
+README
+
+*The following files reside in this directory:
+	main.py
+	interface.py
+	neuralnet.py
+	prep.py
+	report.odx
+	README
+	generated plots from the experiments
+	datasets that were used to train and test on
+
+*To run the experiments and reproduce the result, you need to go
+to the same folder where the code resides, and assuming that
+the data files are also in the same folder, you open the terminal
+and type:
+	python main.py
+
+*To use the interface, you will need to go to the same folder where
+the code resides, and assuming that the data files are also in the
+same folder, you open the terminal and type:
+	python interface.py
+
+It will open up a script that asks you to input width, depth, training file,
+testing file, number of iterations(Remember to use double quotes around string, f
+or number you can just input normally). Once you have specified everything, the model 
+that you asked for will be trained and the plot of error rate vs iterations will be 
+presented to you. If you want to change the value of the seed for different initialization 
+value, you can go into the file interface.py yourself and modify the seed value.If
+you want to change the learning rate (the default is 0.1) you also have to
+go into interface.py to change this value.
+
+*Another way to use the neural network is to use the class neural network and the plotting
+function in the prep.py file. This can be better if you want to test the neural network with
+multiple files and multiple widths and depths without having to type a lot. To do this, you
+have to create a python file, and import the neuralnet.py and prep.py file. Then you can use
+the neural network class to create instance and train these instances easily, and plot them
+using the 2 functions graph and graph2 in prep.py(graph allows you to plot 1 line while graph2
+allows you to plot 2 lines). Also, note that the train function in the neural network will return
+the list of errors rate on training and testing set in every iteration, and you can use these
+in your code too. For more information on how to use the neural network, you can look at main.py
+
